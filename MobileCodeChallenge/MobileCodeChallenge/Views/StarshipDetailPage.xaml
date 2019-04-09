@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileCodeChallenge.Views.StarshipDetailPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".35*"/>
+                <RowDefinition Height=".65*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding StarshipImageSource}" BackgroundColor="DodgerBlue"  HorizontalOptions="Fill" Aspect="AspectFill" Grid.Row="0" Grid.Column="0"/>
+            <ActivityIndicator x:Name="StarshipImageLoading" Color="White" HorizontalOptions="Center" VerticalOptions="Center" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Grid.Row="0" Grid.Column="0"/>
+            <ScrollView VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
+                <Grid x:Name="detailGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name"  Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Name}" Grid.Row="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Model"  Grid.Row="1" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Model}" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Starship Class"  Grid.Row="2" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.StarshipClass}" Grid.Row="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Manufacturer"  Grid.Row="3" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Manufacturer}" Grid.Row="3" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Cost in Credits"  Grid.Row="4" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.CostInCredits}" Grid.Row="4" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Length"  Grid.Row="5" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Length}" Grid.Row="5" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Crew"  Grid.Row="6" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Crew}" Grid.Row="6" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Passengers"  Grid.Row="7" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Passengers}" Grid.Row="7" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Max Atmosphering Speed"  Grid.Row="8" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.MaxAtmospheringSpeed}" Grid.Row="8" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Hyperdrive Rating"  Grid.Row="9" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.HyperdriveRating}" Grid.Row="9" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="MGLT"  Grid.Row="10" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.MGLT}" Grid.Row="10" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Cargo Capactity"  Grid.Row="11" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0"  FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.CargoCapacity}" Grid.Row="11" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                    <Label Text="Consumables"  Grid.Row="12" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="0"  FontAttributes="Bold"/>
+                    <Label Text="{Binding Starship.Consumables}" Grid.Row="12" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Column="1"/>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

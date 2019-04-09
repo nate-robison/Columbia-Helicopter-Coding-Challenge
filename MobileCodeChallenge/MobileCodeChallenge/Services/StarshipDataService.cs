@@ -19,7 +19,7 @@ namespace MobileCodeChallenge.Services
         /// <summary>
         /// Get a ObservableList of all Starships from SWAPI 
         /// </summary>
-        /// <returns>ObservableList of Starships</returns>
+        /// <returns>ObservableList of Starships ordered by Name </returns>
         public async Task<ObservableCollection<Starship>> GetAllStarShips()
         {
 

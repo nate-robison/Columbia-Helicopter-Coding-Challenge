@@ -11,6 +11,8 @@ namespace MobileCodeChallenge.Services
 
         protected BingImageSearchService()
         {
+            //This current key does not work and will silently fail. Used personal key for development 
+            //Did not commit my personal key
             const string subscriptionKey = "70c508d2c10147f79d9d260042ade225";
             var credentials = new ApiKeyServiceClientCredentials(subscriptionKey);
             _client = new ImageSearchClient(credentials);
