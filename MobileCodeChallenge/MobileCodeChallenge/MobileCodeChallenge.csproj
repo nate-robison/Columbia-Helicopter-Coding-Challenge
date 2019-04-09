@@ -16,7 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\StarshipDetailPage.xaml">
+    <Compile Update="Views\StarshipsView.xaml.cs">
+      <DependentUpon>StarshipsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StarshipView.xaml.cs">
+      <DependentUpon>StarshipView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\StarshipView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 namespace MobileCodeChallenge.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class StarshipsView : ContentPage
     {
-        public MainPage()
+        public StarshipsView()
         {
             Title = "Starships";
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace MobileCodeChallenge.Views
             {
                 return;
             }
-            var starshipDetailView = new StarshipDetailPage()
+            var starshipDetailView = new StarshipView()
             {
                 Title = starship.Name
             };

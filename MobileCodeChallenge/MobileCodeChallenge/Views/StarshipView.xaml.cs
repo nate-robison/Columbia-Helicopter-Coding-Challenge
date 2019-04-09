@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 namespace MobileCodeChallenge.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StarshipDetailPage : ContentPage
+    public partial class StarshipView : ContentPage
     {
-        public StarshipDetailPage()
+        public StarshipView()
         {
             InitializeComponent();
         }

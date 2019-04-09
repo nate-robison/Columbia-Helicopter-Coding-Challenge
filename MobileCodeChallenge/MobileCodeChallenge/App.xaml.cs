@@ -11,7 +11,7 @@ namespace MobileCodeChallenge
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage())
+            MainPage = new NavigationPage(new StarshipsView())
             {
                 BarBackgroundColor = Color.DodgerBlue,
                 BarTextColor = Color.White
