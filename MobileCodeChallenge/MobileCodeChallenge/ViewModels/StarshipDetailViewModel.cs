@@ -58,8 +58,16 @@ namespace MobileCodeChallenge.ViewModels
         private async Task GetStarshipImageForDetailPage()
         {
             IsBusy = true;
-            var imageURL = await StarshipImageService.GetImageUrl(starship.Name);
-            StarshipImageSource = ImageSource.FromUri(new Uri(imageURL));
+            try
+            {
+                var imageURL = await StarshipImageService.GetImageUrl(starship.Name);
+                StarshipImageSource = ImageSource.FromUri(new Uri(imageURL));
+            }
+            catch
+            {
+                //Future implementation might include showing default image or alerting we are unable to get image
+                //As well as reportin issues.
+            }
             IsBusy = false;
             
         }
