@@ -10,7 +10,11 @@ namespace MobileCodeChallenge
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.DodgerBlue,
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()
